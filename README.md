@@ -8,7 +8,8 @@ The default Windows 11 configuration imposes a "performance tax" on your hardwar
  - 🔍 *Windows Search (Classic Mode):* Disables AI-enhanced content analysis that generates sustained SSD read/write access.
  - 🧠 *SysMain (Superfetch) Deactivation:* Stops a legacy feature that provides zero benefit to SSDs but consumes between 700 to 1,400 GB of write endurance per year.
  - 📡 *Telemetry & Staging:* Shuts down the behavioral data collection that consumes between 6% and 11% of your SSD controller's bandwidth.
- - 🧹 *Deep Cleanup:* Removes temporary caches and legacy Windows Update residues (WinSxS) using official DISM tools.🏥 Health Monitor: Provides real-time SSD wearout indicators and temperature data.
+ - 🧹 *Deep Cleanup:* Removes temporary caches and legacy Windows Update residues (WinSxS) using official DISM tools.
+ - 🏥 Health Monitor: Provides real-time SSD wearout indicators and temperature data.
 
 📊 *Performance Recovery Gains*
 Based on independent storage benchmark testing (e.g., CrystalDiskMark):
