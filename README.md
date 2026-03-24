@@ -1,7 +1,7 @@
 ⚡ *SSD Master Optimizer & System Cleaner*
 *Unlock your SSD's true potential by reclaiming up to 22% of random write performance.*
-🚀
-This tool was designed to address three specific Windows 11 settings that deliberately throttle your SSD performance to serve Microsoft's background infrastructure. By disabling these features, you stop the continuous, small random writes that compete for your SSD's controller bandwidth
+
+🚀 This tool was designed to address three specific Windows 11 settings that deliberately throttle your SSD performance to serve Microsoft's background infrastructure. By disabling these features, you stop the continuous, small random writes that compete for your SSD's controller bandwidth.
 
 🛠️ *What this Script Fixes*
 The default Windows 11 configuration imposes a "performance tax" on your hardware. Here is how we recover it:
