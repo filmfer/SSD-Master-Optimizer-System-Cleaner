@@ -27,7 +27,7 @@ Based on independent storage benchmark testing (e.g., CrystalDiskMark):
 
 This command downloads the script from your repository, bypasses execution restrictions, and runs it with Administrator privileges.
 
-    powershell -NoProfile -ExecutionPolicy Bypass -Command "iex (New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/filmfer/SSD-Master-Optimizer-System-Cleaner/blob/main/Windows_SSD_Master_Optimizer.ps1')"
+    powershell -NoProfile -ExecutionPolicy Bypass -Command "iex (New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/filmfer/SSD-Master-Optimizer-System-Cleaner/main/Windows_SSD_Master_Optimizer.ps1')"
 
 ⚠️ **DISCLAIMER & LEGAL NOTICE**
 **USE AT YOUR OWN RISK.**🛑
