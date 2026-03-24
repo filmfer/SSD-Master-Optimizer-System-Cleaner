@@ -24,7 +24,8 @@ Based on independent storage benchmark testing (e.g., CrystalDiskMark):
   Application Load Times                        +3% to +17%
 
 🚀 **One-Liner para Execução Direta (PowerShell)**
-Este comando descarrega o script do seu repositório, ignora restrições de execução e corre-o com privilégios de Administrador.
+
+This command downloads the script from your repository, bypasses execution restrictions, and runs it with Administrator privileges.
 
     powershell -NoProfile -ExecutionPolicy Bypass -Command "iex (New-Object System.Net
 
