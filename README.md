@@ -13,7 +13,7 @@ The default Windows 11 configuration imposes a "performance tax" on your hardwar
 📊 *Performance Recovery Gains*
 Based on independent storage benchmark testing (e.g., CrystalDiskMark):
 
-    *Metric*                                      *Improvement*
+  Metric                                        Improvement
   Random Write Performance                      +14% to +22%
   Sequential Write Throughput                   +4% to +8%
   Random Read Performance                       +6% to +9%
@@ -22,7 +22,7 @@ Based on independent storage benchmark testing (e.g., CrystalDiskMark):
 🚀 *One-Liner para Execução Direta (PowerShell)*
 Este comando descarrega o script do seu repositório, ignora restrições de execução e corre-o com privilégios de Administrador.
 
-*powershell -NoProfile -ExecutionPolicy Bypass -Command "iex (New-Object System.Net*
+    *powershell -NoProfile -ExecutionPolicy Bypass -Command "iex (New-Object System.Net*
 
 
 ⚠️ *DISCLAIMER & LEGAL NOTICE*
