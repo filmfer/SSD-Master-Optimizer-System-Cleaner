@@ -22,8 +22,7 @@ Based on independent storage benchmark testing (e.g., CrystalDiskMark):
 🚀 *One-Liner para Execução Direta (PowerShell)*
 Este comando descarrega o script do seu repositório, ignora restrições de execução e corre-o com privilégios de Administrador.
 
-    *powershell -NoProfile -ExecutionPolicy Bypass -Command "iex (New-Object System.Net*
-
+    powershell -NoProfile -ExecutionPolicy Bypass -Command "iex (New-Object System.Net
 
 ⚠️ *DISCLAIMER & LEGAL NOTICE*
 *USE AT YOUR OWN RISK. *🛑
