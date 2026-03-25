@@ -53,6 +53,14 @@ This command downloads the script from your repository, bypasses execution restr
 
 ---
 
+### 📊 Watchdog Impact Table
+
+| Feature Monitored | If Re-enabled by Windows | Performance Loss | Watchdog Action |
+| :--- | :--- | :--- | :--- |
+| **SysMain Service** | 2-4GB Daily Writes | **High Wearout** | 🚨 Alert & Notify |
+| **Telemetry Staging**| 6-11% Bandwidth Loss | **Random Write Lag**| 🚨 Alert & Notify |
+| **Enhanced Indexing**| Constant IOPS Usage | **System Stutter** | 🚨 Alert & Notify |
+
 ---
 
 ## 🛡️ Persistent Performance Monitoring (`CheckSSDStatus.ps1`)
@@ -75,15 +83,6 @@ To keep your **+22% Random Write boost** active forever, set this script to run 
    * Add arguments: `-ExecutionPolicy Bypass -WindowStyle Hidden -File "C:\Path\To\CheckSSDStatus.ps1"`
 5. Settings: Check **"Run with highest privileges"**.
 
----
-
-### 📊 Watchdog Impact Table
-
-| Feature Monitored | If Re-enabled by Windows | Performance Loss | Watchdog Action |
-| :--- | :--- | :--- | :--- |
-| **SysMain Service** | 2-4GB Daily Writes | **High Wearout** | 🚨 Alert & Notify |
-| **Telemetry Staging**| 6-11% Bandwidth Loss | **Random Write Lag**| 🚨 Alert & Notify |
-| **Enhanced Indexing**| Constant IOPS Usage | **System Stutter** | 🚨 Alert & Notify |
 
 ---
 
