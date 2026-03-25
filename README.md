@@ -1,6 +1,6 @@
-⚡ **SSD Master Optimizer & System Cleaner**
+### ⚡ **SSD Master Optimizer & System Cleaner**
 
-**Unlock your SSD's true potential by reclaiming up to 22% of random write performance.**
+## **Unlock your SSD's true potential by reclaiming up to 22% of random write performance.**
 
 🚀
 
@@ -8,7 +8,7 @@ This tool was designed to address three specific Windows 11 settings that delibe
 
 ---
 
-🛠️ **What this Script Fixes**
+## 🛠️ **What this Script Fixes**
 The default Windows 11 configuration imposes a "performance tax" on your hardware. Here is how we recover it:
  - 🔍 **Windows Search (Classic Mode):** Disables AI-enhanced content analysis that generates sustained SSD read/write access.
  - 🧠 **SysMain (Superfetch) Deactivation:** Stops a legacy feature that provides zero benefit to SSDs but consumes between 700 to 1,400 GB of write endurance per year.
@@ -18,7 +18,7 @@ The default Windows 11 configuration imposes a "performance tax" on your hardwar
 
 ---
 
-### 📊 Performance Recovery Data (Windows 11)
+## 📊 Performance Recovery Data (Windows 11)
 
 | Performance Metric          | Default Windows 11 | Optimized (Script) | Net Improvement |
 | :-------------------------- | :----------------: | :----------------: | :-------------- |
@@ -30,7 +30,7 @@ The default Windows 11 configuration imposes a "performance tax" on your hardwar
 
 ---
 
-🚀 **One-Liner para Execução Direta (PowerShell)**
+## 🚀 **One-Liner para Execução Direta (PowerShell)**
 
 This command downloads the script from your repository, bypasses execution restrictions, and runs it with Administrator privileges.
 
@@ -50,7 +50,7 @@ Isto garante que a **latência de escrita aleatória (14-22% mais baixa)** e a *
 $TaskName = "SSDMasterFullOptimize"; $ActionScript = "-NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -Command `"iex (New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/filmfer/SSD-Master-Optimizer-System-Cleaner/main/Windows_SSD_Master_Optimizer.ps1'); Create-RestorePoint; Optimize-SSD; Clean-Temporary; Clean-WindowsUpdate; Get-SSDHealth`""; $Action = New-ScheduledTaskAction -Execute 'powershell.exe' -Argument $ActionScript; $Trigger = New-ScheduledTaskTrigger -Monthly -At 10am -DaysOfMonth 1; Register-ScheduledTask -Action $Action -Trigger $Trigger -TaskName $TaskName -User "System" -RunLevel Highest -Force
 ```
 
-### 🗑️ Como Remover o Agendamento Mensal
+## 🗑️ Como Remover o Agendamento Mensal
 
 Se decidires que já não queres que a otimização seja executada automaticamente todos os meses, podes remover a tarefa agendada com este comando em **PowerShell (Admin)**:
 
@@ -60,7 +60,7 @@ Unregister-ScheduledTask -TaskName "SSDMasterFullOptimize" -Confirm:$false; Writ
 
 ---
 
-⚠️ **DISCLAIMER & LEGAL NOTICE**
+## ⚠️ **DISCLAIMER & LEGAL NOTICE**
 **USE AT YOUR OWN RISK.**🛑
  - **No Liability:** This script is provided "as is" without any warranty. The author (FILMFER.COM) cannot be held legally responsible for any data loss, system instability, or hardware damage resulting from the use of this tool.
  - **System Changes:** This script modifies system services, registry keys, and deletes temporary files. It is highly recommended to use Option 1 (Create Restore Point) before applying any optimizations.
@@ -68,7 +68,7 @@ Unregister-ScheduledTask -TaskName "SSDMasterFullOptimize" -Confirm:$false; Writ
 
 ---
 
-💻 **Installation & Usage**
+##  💻 **Installation & Usage**
  1. Open PowerShell as Administrator.
  2. Run the command provided in the one-liner or download the *.ps1* file manually.
  3. Follow the interactive menu.
@@ -94,7 +94,7 @@ Windows Updates often silently re-enable background services that throttle your 
 * **🔎 Search Mode Check:** Verifies if Windows Search has reverted to "Enhanced Mode" (IA indexing).
 * **⚠️ Desktop Alerts:** If a performance "leak" is detected, it triggers a non-intrusive popup alert so you can re-run the optimizer.
 
-### How to Automate it (Recommended):
+## How to Automate it (Recommended):
 To keep your **+22% Random Write boost** active forever, set this script to run once a month via Task Scheduler:
 
 1. Open **Task Scheduler** as Administrator.
@@ -105,7 +105,7 @@ To keep your **+22% Random Write boost** active forever, set this script to run 
    * Add arguments: `-ExecutionPolicy Bypass -WindowStyle Hidden -File "C:\Path\To\CheckSSDStatus.ps1"`
 5. Settings: Check **"Run with highest privileges"**.
 
-### 🛡️ One-Liner: Enable Persistent SSD Monitoring
+## 🛡️ One-Liner: Enable Persistent SSD Monitoring
 
 To ensure Windows Update doesn't silently disable your optimizations (re-enabling SysMain or Telemetry), run this command once. It creates a hidden background task that verifies your SSD status at every logon:
 
@@ -124,7 +124,7 @@ Get-ScheduledTask -TaskName "SSDMasterWatchdog" -ErrorAction SilentlyContinue | 
 
 ---
 
-🌟 **Contribution**
+## 🌟 **Contribution**
 Found a bug or have a suggestion? Feel free to open an Issue or submit a Pull Request.
 **Powered by FILMFER.COM** | Let your SSD do what you paid for it to do.
 
@@ -141,7 +141,7 @@ If this tool helped you recover **22% of your SSD performance** or saved your dr
 
 Every contribution helps maintain the scripts and research into hardware optimization!
 
-### 💳 Donate via PayPal
+## 💳 Donate via PayPal
 You can send a tip directly to:
 **[paypal.me/jofifer](https://www.paypal.com/paypalme/jofifer)**
 
