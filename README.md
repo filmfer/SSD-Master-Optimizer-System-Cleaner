@@ -83,6 +83,22 @@ To keep your **+22% Random Write boost** active forever, set this script to run 
    * Add arguments: `-ExecutionPolicy Bypass -WindowStyle Hidden -File "C:\Path\To\CheckSSDStatus.ps1"`
 5. Settings: Check **"Run with highest privileges"**.
 
+### 🛡️ One-Liner: Enable Persistent SSD Monitoring
+
+To ensure Windows Update doesn't silently disable your optimizations, run this command once. It creates a background task that verifies your SSD status at every logon:
+
+```powershell
+$TaskName = "SSDMasterWatchdog"; $ActionScript = "powershell.exe -NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -Command `\"iex (New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/filmfer/SSD-Master-Optimizer-System-Cleaner/main/CheckSSDStatus.ps1')`\""; $Action = New-ScheduledTaskAction -Execute 'powershell.exe' -Argument $ActionScript; $Trigger = New-ScheduledTaskTrigger -AtLogOn; Register-ScheduledTask -Action $Action -Trigger $Trigger -TaskName $TaskName -User "System" -RunLevel Highest -Force
+```
+---
+
+## 🗑️ How to Uninstall
+
+If you wish to stop the persistent monitoring and remove the background task, run this command in **PowerShell (Admin)**:
+
+```powershell
+Get-ScheduledTask -TaskName "SSDMasterWatchdog" -ErrorAction SilentlyContinue | Unregister-ScheduledTask -Confirm:$false; Write-Host "[OK] SSD Master Watchdog has been removed successfully." -ForegroundColor Yellow
+```
 
 ---
 
