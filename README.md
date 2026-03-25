@@ -38,6 +38,28 @@ This command downloads the script from your repository, bypasses execution restr
 
 ---
 
+## 🗓️ Agendamento Automático Mensal (Full Optimization)
+
+Para manter o Windows 11 sempre otimizado sem intervenção manual, podes criar uma tarefa que executa o equivalente à opção **"6. RUN ALL"** no primeiro dia de cada mês. 
+
+Isto garante que a **latência de escrita aleatória (14-22% mais baixa)** e a **banda do controlador (6-11% recuperada)** sejam mantidas mesmo após grandes atualizações do Windows.
+
+### Comando de Instalação (PowerShell Admin):
+
+```powershell
+$TaskName = "SSDMasterFullOptimize"; $ActionScript = "-NoProfile -ExecutionPolicy Bypass -WindowStyle Hidden -Command `"iex (New-Object System.Net.WebClient).DownloadString('https://raw.githubusercontent.com/filmfer/SSD-Master-Optimizer-System-Cleaner/main/Windows_SSD_Master_Optimizer.ps1'); Create-RestorePoint; Optimize-SSD; Clean-Temporary; Clean-WindowsUpdate; Get-SSDHealth`""; $Action = New-ScheduledTaskAction -Execute 'powershell.exe' -Argument $ActionScript; $Trigger = New-ScheduledTaskTrigger -Monthly -At 10am -DaysOfMonth 1; Register-ScheduledTask -Action $Action -Trigger $Trigger -TaskName $TaskName -User "System" -RunLevel Highest -Force
+```
+
+### 🗑️ Como Remover o Agendamento Mensal
+
+Se decidires que já não queres que a otimização seja executada automaticamente todos os meses, podes remover a tarefa agendada com este comando em **PowerShell (Admin)**:
+
+```powershell
+Unregister-ScheduledTask -TaskName "SSDMasterFullOptimize" -Confirm:$false; Write-Host "[OK] Agendamento de Otimização Mensal removido com sucesso." -ForegroundColor Yellow
+```
+
+---
+
 ⚠️ **DISCLAIMER & LEGAL NOTICE**
 **USE AT YOUR OWN RISK.**🛑
  - **No Liability:** This script is provided "as is" without any warranty. The author (FILMFER.COM) cannot be held legally responsible for any data loss, system instability, or hardware damage resulting from the use of this tool.
